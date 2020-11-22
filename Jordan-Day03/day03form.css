@@ -1,0 +1,367 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 1349px;
+    height: 1569px;
+    background-color: #f8f9fa;
+    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol;"
+}
+
+#container {
+    height: 1569px;
+    width: 960px;
+    margin: 0 195px;
+    padding: 0 15px;
+    max-width: 960px;
+    text-align: left;
+}
+
+#header {
+    height: 314px;
+    width: 930px;
+    text-align: center;
+    padding: 48px 0;
+}
+
+#maincontent {
+    height: 1101px;
+    width: 960px;
+    margin: 0 -15px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+}
+
+#footer {
+    height: 100px;
+    width: 930px;
+    margin: 48px 0 0;
+    padding: 48px 0 0 0;
+    text-align: center;
+}
+
+#header img {
+    height: 72px;
+    width: 72px;
+    margin: 0 425px 20px 425px;
+}
+
+#header h2 {
+    font-size: 32px;
+    font-weight: 500px;
+    height: 38px;
+    width: 930px;
+    margin: 0 0 8px 0;
+}
+
+#header p {
+    font-size: 20px;
+    font-weight: 300;
+    height: 60px;
+    width: 930px;
+    margin: 0 0 16px 0;
+}
+
+#billing {
+    /* background-color: aquamarine; */
+    height: 1107px;
+    width: 639.984px;
+    padding: 0 15px 0 15px;
+    min-height: 1px;
+    max-width: 66.6667%;
+    min-width: auto;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none solid rgb(33, 37, 41);
+    text-align: left;
+}
+
+#cart {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none solid rgb(33, 37, 41);
+    text-align: left;
+    height: 1083px;
+    width: 320px;
+    margin-right: 24px;
+    padding: 0 15px;
+    min-height: 1px;
+    max-width: 33.3333%;
+    min-width: auto;
+    position: relative;
+}
+
+h4 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.8px;
+    text-align: left;
+    height: 28px;
+    width: 461px;
+    margin-bottom: 16px;
+}
+
+.inpname {
+    display: flex;
+    flex-direction: row;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    line-height: 24px;
+    height: 86px;
+    width: 640px;
+    margin: 0 -15px;
+}
+
+.username {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    line-height: 24px;
+    height: 70px;
+    width: 491px;
+    margin: 0 0 16px 0;
+    padding: 0 15px 0 15px;
+    min-height: 1px;
+    min-width: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    height: 24px;
+    width: 71.6094px;
+    margin: 0 0 8px 0;
+}
+
+.input2 {
+    height: 38px;
+    width: 289.984px;
+    border: 1px solid #80BDFF;
+    padding: 6px 12px 6px 12px;
+}
+
+.inpusername {
+    height: 70px;
+    width: 609.984px;
+    margin: 0 0 16px 0;
+}
+
+.input {
+    height: 38px;
+    width: 609.984px;
+    border: 1px solid #CED4DA;
+    padding: 6px 12px 6px 12px;
+}
+
+#email {
+    display: inline-block;
+    height: 24px;
+    width: 144.938px;
+    margin: 0 0 8px 0;
+}
+
+span {
+    color: #6C757D;
+}
+
+#address {
+    display: flex;
+    flex-direction: row;
+    height: 86px;
+    width: 639.984px;
+    margin: 0 -15px 0 -15px;
+}
+
+.alamat {
+    height: 70px;
+    width: 266.656px;
+    margin: 0 0 16px 0;
+    padding: 0 15px 0 15px;
+    min-height: 1px;
+    max-width: 41.6667%;
+    min-width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#Country {
+    height: 38px;
+    width: 236.656px;
+    border: 1px solid #CED4DA;
+    padding: 6px 28px 6px 12px;
+}
+
+#state {
+    height: 38px;
+    width: 183.328px;
+    border: 1px solid #CED4DA;
+    padding: 6px 28px 6px 12px;
+}
+
+#Zip {
+    height: 38px;
+    width: 129.984px;
+    border: 1px solid #80BDFF;
+    padding: 6px 12px 6px 12px;
+}
+
+.custom {
+    margin: 15px 0;
+    height: 24px;
+    width: 637px;
+    min-height: 24px;
+}
+
+.cuslabel {
+    height: 24px;
+    width: 357.062px;
+}
+
+hr {
+    background-color: #c7c7c7;
+}
+
+.radioo {
+    display: flex;
+    flex-direction: row;
+    height: 24px;
+    width: 461px;
+    min-height: 24px;
+    position: relative;
+    align-items: center;
+}
+
+.label {
+    height: 24px;
+    width: 100.1875px;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.radio {
+    height: 20px;
+    width: 20px;
+    min-height: 20px;
+    min-width: 20px;
+}
+
+.small {
+    color: #6C757D;
+}
+
+.exp {
+    height: 70px;
+    width: 266.656px;
+    padding: 0 15px 0 0px;
+    margin: 0 0 16px 0;
+    min-height: 1px;
+    max-width: 41.6667%;
+    min-width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.buatrow {
+    display: flex;
+    flex-direction: row;
+    height: 86px;
+    width: 390px;
+    margin: 0 -15px 0 0;
+}
+
+#checkout {
+    margin-top: 30px;
+    height: 48px;
+    width: 609.984px;
+    border: 1px solid #007BFF;
+    padding: 8px 16px 8px 16px;
+    background-color: #007BFF;
+    background-position: 0% 0%;
+    border-radius: 5px;
+    color: white;
+    font-size: larger;
+}
+
+#cart {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.cartdata {
+    height: 65px;
+    width: 289.984px;
+    border: 1px solid rgb(141, 141, 141);
+    margin: 0 0 -1px 0;
+    padding: 12px 20px 12px 20px;
+    min-height: auto;
+    min-width: auto;
+}
+
+.product {
+    height: 39px;
+    width: 101.734px;
+    min-height: auto;
+    min-width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.namama {
+    height: 19px;
+    width: 120.734px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+}
+
+.desc {
+    display: inline;
+    font-size: 12.8px;
+    line-height: 16px;
+    text-decoration: none solid rgb(108, 117, 125);
+    color: 6C757D;
+}
+
+.total {
+    height: 80px;
+    align-items: center;
+}
+
+.ha4 {
+    width: 95%;
+}
+#copyright{
+    height: 24px;
+width: 930px;
+margin: 0 0 4px;
+color: #6c757d;
+}
+#hovconts{
+    list-style: none;
+}
+.hovs{
+    display: inline-block;
+    
+}
+#reedem{
+    height: 56px;
+    position: relative;
+width: 289.984px;
+border: 1px solid  #bcc8d5 ;
+padding: 8px 8px 8px 8px;
+border-radius: 3%;
+}
+#button-addon2{
+    color: white;
+    background-color: #6C757D ;
+}
+.text-muted,.holo,.text-sucess{
+    font-size: x-large;
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="day03form.css">
+    <link rel="stylesheet" href="./bootstrap-4.5.3-dist/css/bootstrap.min.css">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <img src="data:image/png;base64,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"
+                alt="">
+            <h2>Checkout Form</h2>
+            <p>Below is an example form built entirely with Bootstrap's form controls. Each required form group has a
+                validation state that can be triggered by attempting to submit the form without completing it.</p>
+        </div>
+        <div id="maincontent">
+            <div id="billing">
+                <h4>Billing address</h4>
+                <div class="inpname">
+                    <div class="username">
+                        <label " >First nane</label>
+                        <input class=" input2" type=" text">
+                    </div>
+                    <div class="username">
+                        <label for="lastname">Last name</label>
+                        <input class="input2" name="lastname" type="text">
+                    </div>
+                </div>
+                <div class="inpusername">
+                    <label for="">Username</label>
+                    <input class="input" type="text">
+                </div>
+                <div class="inpusername">
+                    <label for="" id="email">Email<span>(Optional)</span></label>
+                    <input class="input" type="text">
+                </div>
+                <div class="inpusername">
+                    <label for="">Address</label>
+                    <input class="input" type="text">
+                </div>
+                <div class="inpusername">
+                    <label for="">Address2<span>(Optional)</span></label>
+                    <input class="input" type="text">
+                </div>
+                <div id="address">
+                    <div class="alamat">
+                        <label for="">Country</label>
+                        <input type="number" name="" placeholder="Choose" id="Country">
+
+                    </div>
+                    <div class="alamat">
+                        <label for="">State</label>
+                        <input type="number" name="" placeholder="Choose" id="state">
+
+                    </div>
+                    <div class="alamat">
+                        <label for="">Zip</label>
+                        <input type="text" name="" id="Zip">
+                    </div>
+
+                </div>
+                <hr>
+                <div class="custom">
+                    <input type="checkbox" class="inputz" id="pddress">
+                    <label class="cuslabel" for="same-address">Shipping address is the same as my billing
+                        address</label>
+                </div>
+                <div class="custom">
+                    <input type="checkbox" class="inputz" id="pnfo">
+                    <label class="cuslabel" for="save-info">Save this information for next time</label>
+                </div>
+                <hr>
+                <h4 class="mb-3">Payment</h4>
+                <div class="payment">
+                    <div class="radioo">
+                        <input id="credit" name="paymentMethod" type="radio" class="radio" checked>
+                        <label class="label" for="credit">Credit card</label>
+                    </div>
+                    <div class="radioo">
+                        <input id="debit" name="paymentMethod" type="radio" class="radio">
+                        <label class="label" for="debit">Debit card</label>
+                    </div>
+                    <div class="radioo">
+                        <input id="paypal" name="paymentMethod" type="radio" class="radio">
+                        <label class="label" for="paypal">Paypal</label>
+                    </div>
+                </div><br>
+                <div class="inpname">
+                    <div class="username">
+                        <label for="">Name on card</label>
+                        <input class=" input2" type=" text">
+                        <small class="small">Fullname as displayed on card</small>
+                    </div>
+                    <div class="username">
+                        <label for="lastname">Credit card number</label>
+                        <input class="input2" name="lastname" type="text">
+                    </div>
+                </div><br>
+                <div class="buatrow">
+                    <div class="exp">
+                        <label for="">Expiration</label>
+                        <input type="text" name="" id="Zip">
+                    </div>
+                    <div class="exp">
+                        <label for="">CVV</label>
+                        <input type="text" name="" id="Zip">
+                    </div>
+                </div>
+                <br>
+                <hr>
+                <button id="checkout"> Continue to checkout</button>
+            </div>
+
+
+
+            <div id="cart">
+                <!-- <span id="cart">Your cart</span>
+                <br><br>
+                <ul>
+                    <li type="none" class="cartdata">
+                        <div class="product">
+                            <h6 class="namama">Product name</h6>
+                            <small class="desc">Brief description</small>
+                        </div>
+                    </li>
+                    <li type="none" class="cartdata"></li>
+                    <li type="none"class="cartdata"></li>
+                    <li type="none"class="cartdata"></li>
+                    <li type="none"class="cartdata"></li>
+                </ul> -->
+                    <h4 class="ha4 d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-muted">Your cart</span>
+                        <span class="badge badge-secondary badge-pill">3</span>
+                    </h4>
+                    <ul class="ululu">
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div class="product desc">
+                                <h6 class="namama">Product name</h6>
+                                <small class="desc">Brief description</small>
+                            </div>
+                            <span class="text-muted">$12</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div class="product desc">
+                                <h6 class="namama">Second product</h6>
+                                <small class="desc">Brief description</small>
+                            </div>
+                            <span class="text-muted">$8</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div class="product desc">
+                                <h6 class="namama">Third item</h6>
+                                <small class="desc">Brief description</small>
+                            </div>
+                            <span class="text-muted">$5</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between bg-light">
+                            <div class="text-success desc">
+                                <h6 class="namama">Promo code</h6>
+                                <small class="desc">EXAMPLECODE</small>
+                            </div>
+                            <span class="text-success">-$5</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between total">
+                            <span id="total">Total (USD)</span>
+                            <strong class="holo">$20</strong>
+                        </li>
+                    </ul>
+                    <form id="reedem">
+                        <div class="input-group ole mb-3">
+                            <input type="text" class="form-control" placeholder="Promo code" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="button" id="button-addon2">Reedem</button>
+                            </div>
+                          </div>
+                    </form>
+                </div>
+            </div>
+            <div id="footer">
+                <p id="copyright">
+                    © 2017-2018 Company Name
+                </p>
+                <ul id="hovconts">
+                    <li class="hovs"><a class="slc" href="">Privacy</a></li>
+                    <li class="hovs"><a class="slc" href="">Terms</a></li>
+                    <li class="hovs"><a class="slc" href="">Support</a></li>
+                </ul>
+            </div>
+        </div>
+</body>
+
+</html>
