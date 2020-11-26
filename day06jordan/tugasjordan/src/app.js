@@ -20,7 +20,7 @@ class App extends React.Component{
     
         return this.state.list.map((a, b) => <tr>
             <td>{a}</td>
-            <td><button  className='button' onClick={b => this.button(b)}>X</button></td>
+            <td><button  className='button' onClick={() => this.button(b)}>X</button></td>
         </tr>)
     }
     
