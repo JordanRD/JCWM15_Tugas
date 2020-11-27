@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
-import history from './../history'
+import {Link} from 'react-router-dom'
 class Home extends React.Component {
     render() {
         return (
@@ -9,8 +9,8 @@ class Home extends React.Component {
                 <h1>
                     Ini Home Page
             </h1>
-                <Button width='50'  onClick={()=> history.push('/content1')}>
-                Link
+                <Button width='50'>
+                    <Link style={{color:'white',textDecoration:'none'}} to='/content1'>To Link</Link>
                 </Button>
                 
             </div>

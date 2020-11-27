@@ -1,21 +1,29 @@
 import React from 'react'
-import { Switch, Route, Router } from 'react-router-dom'
+import {Switch, Route} from 'react-router-dom'
 import Home from './page/home'
+import Navigation from './components/navigation'
 import Content1 from './page/content1'
 import Content2 from './page/content2'
 import Carousel1 from './page/carousel';
-import history from './history'
-export default class Routes extends React.Component {
-    render() {
-        return (
-            <Router history={history}>
+import NotFound from './page/404notfound'
+import News from './page/newsapi'
+class App extends React.Component{
+
+  render() {
+    return (
+      <div>
+      <Navigation />
                 <Switch>
                  <Route path='/' component={Home} exact /> 
                     <Route path='/content1' component={Content1} />
                     <Route path='/content2' component={Content2} />
                     <Route path='/carousel' component={Carousel1} /> 
+                    <Route path='/news' component={News} /> 
+                    <Route path='*' component={NotFound}/>
                 </Switch>
-            </Router>
-        )
-    }
+      </div>
+    )
+  }
 }
+export default App
+

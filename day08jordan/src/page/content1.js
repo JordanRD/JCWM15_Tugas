@@ -3,7 +3,8 @@ import React from 'react'
 import {
     Button
 } from 'react-bootstrap'
-import history from './../history'
+import {Link} from 'react-router-dom'
+// 
 class Content1 extends React.Component{
     render() {
         return (
@@ -11,8 +12,8 @@ class Content1 extends React.Component{
                 <h1>
                     Ini Link Page
                 </h1>
-                <Button width='50'onClick={()=> history.push('/')}>
-                Return to Home
+                <Button width='50'>
+                <Link style={{color:'white',textDecoration:'none'}} to='/'>Return to Home</Link>
                 </Button>
                 
                 
