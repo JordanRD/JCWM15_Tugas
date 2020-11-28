@@ -13,12 +13,13 @@ import {
 
 
 let URL = 'http://newsapi.org/v2/top-headlines?country='
+let CATEGORY ='&category='
 let KEY = '&apiKey=3d178d8a35d749f2ad0ca1697fc12f7a'
 class News extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            link: [`http://newsapi.org/v2/top-headlines?country=id${KEY}`],
+            link: [`http://newsapi.org/v2/top-headlines?country=id`],
             country: [
                 ['Indonesia', 'id'],
                 ['Philiphines', 'ph'],
@@ -32,7 +33,18 @@ class News extends React.Component {
                 ['United States', 'us']
             ],
             news: [],
-            inputvalue: ''
+            inputvalue: '',
+            category: 
+                [
+                    'sports',
+                    'entertainment',
+                    'health',
+                    'business',
+                    'technology',
+                    'science'],
+            textcountry: '',
+            fixcategory: '',
+            textcategory:''
             
         }
     }
@@ -42,9 +54,10 @@ class News extends React.Component {
 
     }
     getdata = () => {
-        Axios.get(this.state.link[0])
+        Axios.get(this.state.link[0]+this.state.fixcategory+KEY)
         .then((res) => {
             this.setState({ news: res.data.articles })
+            console.log(this.state.link[0]+this.state.fixcategory+KEY)
 
         })
         .catch((err) => {
@@ -87,18 +100,14 @@ class News extends React.Component {
     }
 
     ChangeCountry(event) {
-        let jumlah = URL + this.state.country[event][1] + KEY
+        this.setState({textcountry:this.state.country[event][0]})
+        let country=this.state.country[event][1]
+        let jumlah = URL + country
         let temp = [jumlah]
         this.setState({ link: temp })
-        Axios.get(this.state.link[0])
-        .then((res) => {
-            this.setState({ news: res.data.articles })
+        setTimeout(() => {
             this.getdata()
-
-        })
-        .catch((err) => {
-            console.log(err)
-        })
+        }, 100);
 
     }
 
@@ -106,9 +115,23 @@ class News extends React.Component {
         this.setState({ inputvalue: i.target.value })
         console.log(this.state.inputvalue);
     }
-
+    Showcategory = () => {
+        return this.state.category.map((item, index) => {
+            return (
+                <NavDropdown.Item onClick={() => this.ChangeCategory(index)} value={item}>{item}</NavDropdown.Item>
+            )
+        })
+    }
+    ChangeCategory = (event) => {
+        this.setState({textcategory:this.state.category[event]})
+        let temp = CATEGORY+this.state.category[event]
+        this.setState({ fixcategory: temp })
+        setTimeout(() => {
+            this.getdata()
+        }, 100);
+    }
     render() {
-        // console.log(this.state.link);
+        console.log(this.state.link[0]+this.state.fixcategory+KEY);
         return (
             <div >
                 <Navbar bg="light" expand="lg" style={styles.h1props}>
@@ -116,8 +139,13 @@ class News extends React.Component {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
-                            <NavDropdown title="Country" id="basic-nav-dropdown">
+                            <NavDropdown title={this.state.textcountry==''?'Indonesia':this.state.textcountry} id="basic-nav-dropdown">
                                 {this.Showcountry()}
+                            </NavDropdown>
+                        </Nav>
+                        <Nav className="mr-auto">
+                            <NavDropdown title={this.state.textcategory==''?'Select category':this.state.textcategory} id="basic-nav-dropdown">
+                                {this.Showcategory()}
                             </NavDropdown>
                         </Nav>
                         <Form inline>
