@@ -71,7 +71,7 @@ class News extends React.Component {
 
         let filternews = this.state.news.filter((a) => {
             let regex = new RegExp(this.state.inputvalue,'gi')
-            if(regex.test(a.title))return a.title
+            if(regex.test(a.title)||regex.test(a.description))return a.title
         })
 
         // console.log(filternews);
