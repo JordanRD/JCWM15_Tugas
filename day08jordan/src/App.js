@@ -7,6 +7,7 @@ import Content2 from './page/content2'
 import Carousel1 from './page/carousel';
 import NotFound from './page/404notfound'
 import News from './page/newsapi'
+import TableJSON from './page/tablejson';
 class App extends React.Component{
 
   render() {
@@ -19,6 +20,7 @@ class App extends React.Component{
                     <Route path='/content2' component={Content2} />
                     <Route path='/carousel' component={Carousel1} /> 
                     <Route path='/news' component={News} /> 
+                    <Route path='/table' component={TableJSON} /> 
                     <Route path='*' component={NotFound}/>
                 </Switch>
       </div>
