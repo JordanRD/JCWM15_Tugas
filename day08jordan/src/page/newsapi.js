@@ -11,7 +11,6 @@ import {
     Nav
 } from 'react-bootstrap'
 
-
 let URL = 'http://newsapi.org/v2/top-headlines?country='
 let CATEGORY ='&category='
 let KEY = '&apiKey=3d178d8a35d749f2ad0ca1697fc12f7a'
@@ -34,14 +33,14 @@ class News extends React.Component {
             ],
             news: [],
             inputvalue: '',
-            category: 
-                [
+            category: [
                     'sports',
                     'entertainment',
                     'health',
                     'business',
                     'technology',
-                    'science'],
+                    'science'
+                ],
             textcountry: '',
             fixcategory: '',
             textcategory:''
@@ -49,9 +48,7 @@ class News extends React.Component {
         }
     }
     componentDidMount() {
-        
          this.getdata()
-
     }
     getdata = () => {
         Axios.get(this.state.link[0]+this.state.fixcategory+KEY)
@@ -98,7 +95,6 @@ class News extends React.Component {
             )
         })
     }
-
     ChangeCountry(event) {
         this.setState({textcountry:this.state.country[event][0]})
         let country=this.state.country[event][1]
@@ -110,7 +106,6 @@ class News extends React.Component {
         }, 100);
 
     }
-
     Input = (i) => {
         this.setState({ inputvalue: i.target.value })
         console.log(this.state.inputvalue);
@@ -162,13 +157,6 @@ class News extends React.Component {
         )
     }
 }
-
-
-
-
-
-
-
 const styles = {
     h1props: {
         padding: '0 10%',
@@ -182,27 +170,4 @@ export default News
 
 
 
-                // {
-                //     title: 'gawat merokok dapat menghasilkan polusi',
-                //     description: 'pak andi perokok ...'
-                // },
-                // {
-                //     title: 'partai kacang polong diprotes warga',
-                //     description: 'ibu siti memprotes karena...'
-                // },
-                // {
-                //     title: 'narkoba semakin berbahaya',
-                //     description: 'ayah dari seorang bocah memberi...'
-                // },
-                // {
-                //     title: 'jangan berikan rokok',
-                //     description: 'bocah memberi sapi...'
-                // },
-                // {
-                //     title: 'andono bergabung dengan komunitas',
-                //     description :'tapi ternyata...'
-                // },
-                // {
-                //     title: 'presiden thailand setuju dengan anaknya',
-                //     description :'setuju kalau anaknya...'
-                // }
+
