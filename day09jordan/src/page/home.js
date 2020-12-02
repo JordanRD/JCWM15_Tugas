@@ -10,7 +10,7 @@ class Home extends React.Component {
                     Ini Home Page
             </h1>
                 <Button width='50'>
-                    <Link style={{color:'white',textDecoration:'none'}} to='/content1'>To Link</Link>
+                <Link style={{color:'white',textDecoration:'none',width:'100%'}} to='/content1'>To Link</Link>
                 </Button>
                 
             </div>
@@ -18,3 +18,5 @@ class Home extends React.Component {
     }
 }
 export default Home
+
+//style={{width:'100%}}

@@ -1,10 +1,17 @@
 import React from 'react'
+import {connect} from 'react-redux'
 class NotFound extends React.Component{
-
     render() {
         return (
-            <h1>404 Not Found</h1>
+            <h1>
+                {this.props.username?'404 Not Found':'Please Login or Register'}
+            </h1>
         )
     }
 }
-export default NotFound
+const mapStateToProps = (state) => {
+    return {
+        username: state.user.username
+    }
+}
+export default connect(mapStateToProps) (NotFound)

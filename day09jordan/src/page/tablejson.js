@@ -46,25 +46,6 @@ export default class TableJSON extends Component {
     }
     tableBody = (a) => {
         let { dbusers, editdata } = this.state
-        let gantiInput = dbusers
-        // if (typeof (editdata) !== 'object') {
-        //     // this.setState({first_name:gantiInput[editdata].first_name})
-        //     // this.setState({last_name:gantiInput[editdata].last_name})
-        //     // this.setState({ email: gantiInput[editdata].email })
-            
-        //     gantiInput[editdata] = ({
-        //         id: gantiInput[editdata].id,
-        //         first_name:<input name='first_name'onChange={i=>this.savevalue(i)} value={this.state.first_name} type='text' placeholder='firstname'/>,
-        //         last_name:<input name='last_name' onChange={i=>this.savevalue(i)} value={this.state.last_name} type='text' placeholder='lastname'/>,
-        //         email:<input name='email' onChange={i=>this.savevalue(i)} value={this.state.email} type='text' placeholder='email'/>
-
-        //     })
-        //     this.setState({ paramedit: true })
-        //     this.setState({editdata:[]})
-        // }
-        // if (typeof (editdata) === 'object') {
-            
-        // }
         return (
             <tbody>
                 {dbusers.map((item, index) => {
@@ -110,18 +91,18 @@ export default class TableJSON extends Component {
         }
         if (i===true) {
             return (
-                    <div>
-                    <Button value={s}onClick={()=>this.save(s)}>Save</Button>
+                <div>
+                    <Button value={s}onClick={()=>this.save(s,d)}>Save</Button>
                     <Button value={d} onClick={() =>this.cancelButton(d)}>Cancel</Button>
-                    </div>
+                </div>
             )
         }
 
     }
-    save = (a) => {
-        let firstname=this.refs.gafirstname.value
-        let lastname=this.refs.galastname.value
-        let email = this.refs.gaemail.value
+    save = (a,b) => {
+        let firstname=this.refs.gafirstname.value==''?this.state.dbusers[b].first_name:this.refs.gafirstname.value
+        let lastname=this.refs.galastname.value==''?this.state.dbusers[b].last_name:this.refs.galastname.value
+        let email = this.refs.gaemail.value==''?this.state.dbusers[b].email:this.refs.gaemail.value
         Axios.put(`http://localhost:2000/users/${a}`, {
             first_name: firstname,
             last_name: lastname,

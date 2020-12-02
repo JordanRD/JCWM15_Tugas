@@ -1,28 +1,42 @@
 {
   "users": [
     {
-      "first_name": "ffff",
-      "last_name": "fff",
-      "email": "fff",
+      "first_name": "Amy",
+      "last_name": "Andreas",
+      "email": "amyand@gmail.com",
       "id": 1
     },
     {
-      "first_name": "dsds",
-      "last_name": "dss",
-      "email": "dsdsd",
-      "id": 6
+      "first_name": "Seven",
+      "last_name": "Daniel",
+      "email": "sevendans@yahoo.com",
+      "id": 4
     },
     {
-      "first_name": "aaa",
-      "last_name": "sssssss",
-      "email": "fffff",
-      "id": 7
+      "first_name": "Garry",
+      "last_name": "Nugraha",
+      "email": "garrsparkga@gmail.com",
+      "id": 5
+    }
+  ],
+  "login": [
+    {
+      "username": "jordan",
+      "pass": "1234",
+      "email": "jordan123@gmail.com",
+      "id": 1
     },
     {
-      "first_name": "dsds",
-      "last_name": "dsds",
-      "email": "dsds",
-      "id": 8
+      "username": "andhika",
+      "pass": "1111",
+      "email": "andhika@gmail.com",
+      "id": 3
+    },
+    {
+      "username": "frengky",
+      "pass": "6767",
+      "email": "frengky@gmail.com",
+      "id": 4
     }
   ]
 }

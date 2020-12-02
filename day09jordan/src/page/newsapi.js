@@ -130,7 +130,7 @@ class News extends React.Component {
         return (
             <div >
                 <Navbar bg="light" expand="lg" style={styles.h1props}>
-                    <Navbar.Brand href="#home">Menit.com</Navbar.Brand>
+                    <Navbar.Brand >Menit.com</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
